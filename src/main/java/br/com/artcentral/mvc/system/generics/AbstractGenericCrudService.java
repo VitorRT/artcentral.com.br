@@ -1,12 +1,14 @@
 package br.com.artcentral.mvc.system.generics;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 
@@ -34,6 +36,8 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
     protected boolean m_validaSenha = false;
     protected boolean m_validaValoresNulos = false;
 
+    protected String m_errorMessageEntityNotFound = null;
+    
     /**
      * Métodos executados automaticamente pela classe genérica.
      * */
@@ -58,7 +62,7 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
     @Transactional
     public T doUpdateById(Object payload, UUID id) {
         validaValoresNulos(payload);
-        E entity = repository.findById(id).orElseThrow(() -> new RuntimeException("Entity not found"));
+        E entity = findEntityById(id);
         updateEntityFromPayload(entity, payload);
 
         entity = repository.save(entity);
@@ -81,7 +85,7 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
 
     @Override
     public T detailsById(UUID id) {
-        E entity = repository.findById(id).orElseThrow(() -> new RuntimeException("Entity not found"));
+        E entity = findEntityById(id);
 
         if(executaAposDetalhar) {
             doAfterDetailsEntity();
@@ -109,8 +113,12 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
     protected void doAfterDeleteEntity()  { }
 
     public E findEntityById(UUID entityId) {
-       E entity = repository.findById(entityId).orElseThrow(() -> new RuntimeException("Entity not found"));
-       return entity;
+    	if(m_errorMessageEntityNotFound == null)
+    		m_errorMessageEntityNotFound = "Entidade não encontrada";  	
+       Optional<E> entity = repository.findById(entityId);
+       if(entity.isEmpty())
+    	   throw new EntityNotFoundException(m_errorMessageEntityNotFound);
+       return entity.get();
     }
     
     public E findEntityByTag(String tag) {
