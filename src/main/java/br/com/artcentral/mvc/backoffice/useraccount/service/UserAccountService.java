@@ -1,5 +1,6 @@
 package br.com.artcentral.mvc.backoffice.useraccount.service;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -41,7 +42,7 @@ public class UserAccountService extends AbstractGenericCrudService<UserAccountRe
 
 	@Override
 	protected List<UserAccountListResponse> convertToListDto(List<UserAccountEntity> entities) {
-		return entities.stream().map(UserAccountListResponse::new).toList();
+		return  Arrays.asList((UserAccountListResponse[]) entities.stream().map(UserAccountListResponse::new).toArray());
 	}
 
 }

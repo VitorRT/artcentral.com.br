@@ -1,0 +1,7 @@
+- API REST V1 - Art Central
+
+- Artes
+POST  - /api/v1/art/create
+GET   - /api/v1/art/show/{artId}
+PATCH - /api/v1/art/change-status/{artId}?status={status}
+

@@ -7,10 +7,10 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepository<E, UUID>> implements GenericCrud<T, L, E> {
     @Autowired
@@ -116,7 +116,7 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
     	if(m_errorMessageEntityNotFound == null)
     		m_errorMessageEntityNotFound = "Entidade não encontrada";  	
        Optional<E> entity = repository.findById(entityId);
-       if(entity.isEmpty())
+       if(!entity.isPresent())
     	   throw new EntityNotFoundException(m_errorMessageEntityNotFound);
        return entity.get();
     }

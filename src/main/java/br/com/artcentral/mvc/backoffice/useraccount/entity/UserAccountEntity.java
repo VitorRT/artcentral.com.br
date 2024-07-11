@@ -1,18 +1,24 @@
 package br.com.artcentral.mvc.backoffice.useraccount.entity;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 import java.util.UUID;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import br.com.artcentral.mvc.art.entity.ArtEntity;
 import br.com.artcentral.mvc.backoffice.useraccount.constants.UserAccountRole;
 import br.com.artcentral.mvc.backoffice.useraccount.dto.UserAccountPayload;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
@@ -20,7 +26,12 @@ import lombok.Data;
 @Data
 public class UserAccountEntity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator"
+    )
+	@Column(name = "user_account_id")
 	private UUID userAccountId;
 	
 	@Column(name = "user_account_tag", unique = true)
@@ -54,6 +65,11 @@ public class UserAccountEntity {
 	@Column(name = "accept_receive_emails",  nullable = false)
 	private Boolean acceptReceiveEmails;
 
+	
+	// relacionamentos 
+	@OneToMany(mappedBy = "userAccountParent", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private Set<ArtEntity> arts;
+	
 	public UserAccountEntity() {
 			
 	}

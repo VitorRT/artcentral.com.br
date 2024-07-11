@@ -1,0 +1,22 @@
+Datas de prazo de artes
+- Como regra de negócio, caso houver artes com datas de prazo
+1- O sistema deve sempre considerar horário final da data final como "00:00". 
+2- O sistema deve sempre considerar datas úteis.
+3- O sistema deve sempre permitir um prazo mínimo de 3 dias úteis.
+
+
+Artes
+1- O sistema não deve permitir que o usuário deixe uma arte pública em seu perfil antes finaliza-la, e deve deixar isso bem claro.
+2- O sistema deve deixar bem claro que o level da arte impactará em seu perfil artístico
+3- O sistema deve oferecer um CRUD de artes, cada arte podem ter:
+	- Referências Textuais e Visuais
+	- Uma Imagem da arte
+	
+
+Notificações
+1- O sistema deve conter um histórico de notificações
+2- Cada notificação deve ter um tipo:
+	- Priava: Uma notificação exclusiva apenas para o usuário que recebeu a mensagem.
+	- Pública: Uma notificação para todos os usuários do sistema
+	- Exclusiva: Uma notificação exclusiva para um grupo seleto de usuários
+	
