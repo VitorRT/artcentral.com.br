@@ -4,4 +4,6 @@
 POST  - /api/v1/art/create
 GET   - /api/v1/art/show/{artId}
 PATCH - /api/v1/art/change-status/{artId}?status={status}
-
+GET   - /api/v1/art/image-ref/{refId}
+GET   - /api/v1/art/{artId}/all-image-ref
+GET   - /api/v1/art/image-prod/{prodId}

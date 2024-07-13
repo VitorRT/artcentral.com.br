@@ -38,6 +38,8 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
 
     protected String m_errorMessageEntityNotFound = null;
     
+    protected Object m_payload = null;
+    
     /**
      * Métodos executados automaticamente pela classe genérica.
      * */
@@ -46,6 +48,7 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
     @Transactional
     public T doCreate(Object payload) {
         validaValoresNulos(payload);
+        this.m_payload = payload;
         E entity = createEntityFromPayload(payload);
         entity = repository.save(entity);
 
@@ -68,7 +71,10 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
         entity = repository.save(entity);
 
         if(m_executaAposAtualizacao) {
-            doAfterUpdateEntity();
+        	if(m_executaAposComParametro) 
+        		doAfterUpdateEntity(entity);
+        	else
+        		doAfterUpdateEntity();
         }
         return convertToDto(entity);
     }
@@ -107,6 +113,7 @@ public abstract class AbstractGenericCrudService<T, L, E, R extends JpaRepositor
 
     protected void doAfterCreateEntity()  { }
     protected void doAfterCreateEntity(E entity)  { }
+    protected void doAfterUpdateEntity(E entity)  { }
     protected void doAfterUpdateEntity()  { }
     protected void doAfterListEntity()    { }
     protected void doAfterDetailsEntity() { }

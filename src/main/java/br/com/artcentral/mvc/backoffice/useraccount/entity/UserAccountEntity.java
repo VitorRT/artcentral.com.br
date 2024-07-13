@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import br.com.artcentral.mvc.art.entity.ArtEntity;
+import br.com.artcentral.mvc.backoffice.art.entity.ArtEntity;
 import br.com.artcentral.mvc.backoffice.useraccount.constants.UserAccountRole;
 import br.com.artcentral.mvc.backoffice.useraccount.dto.UserAccountPayload;
 import javax.persistence.CascadeType;

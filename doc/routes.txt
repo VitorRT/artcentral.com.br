@@ -1,0 +1,5 @@
+Rotas web da aplicação
+
+
+Artes
+/arts - página de listagen e métricas de artes do usuário.
