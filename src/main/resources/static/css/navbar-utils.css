@@ -1,0 +1,17 @@
+.navbar-principal {
+	width: var(--navbar-width) !important;
+	height: var(--navbar-height) !important;
+	padding: var(--navbar-padding-y) 0 !important;
+	background-color: var(--navbar-background-color) !important;
+	position: fixed;
+	z-index: 999;
+}
+
+.navbar-principal .brand-container > img{
+	width: var(--navbar-brand-image-width) !important;
+	height: var(--navbar-brand-image-height) !important;
+}
+
+.navbar-principal .brand-container .navbar-brand {
+	color: var(--primary-color) !important;
+}

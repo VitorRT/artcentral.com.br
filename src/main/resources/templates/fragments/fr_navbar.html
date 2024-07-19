@@ -1,0 +1,22 @@
+<nav th:fragment="navbar-authenticated" class="navbar navbar-principal navbar-expand-lg boder-bottom-principal">
+	<link rel="stylesheet" th:href="@{/css/navbar-utils.css}">
+	<div class="container d-flex align-items-center justify-content-between">
+		<div class="d-flex align-items-center gap-2 brand-container">
+			<img th:src="@{/img/logo-navbar-brand.png}"
+				alt="art-central-logo-brand" /> <a class="navbar-brand" href="#">Art
+				Central</a>
+		</div>
+
+		<div class="navbar-content">
+			<ul class="navbar-nav me-auto gap-4">
+				<li class="nav-item">
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,0,0,0" />
+					<div th:replace="~{fragments/fr_button :: primaryLinkButton('Indique e ganhe!', '#', 'paid', 'material-symbols-outlined')}"></div>
+				</li>
+				<li class="nav-item">
+					<div th:replace="~{fragments/fr_offcanvas :: navbarToggleMoreItemsOffcanvas}"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,117 @@
+html > body,
+.offcanvas,
+.offcanvas .offcanvas-body,
+.offcanvas .offcanvas-header{
+	background-color: var(--bg-html-color) !important;
+	color: var(--primary-text-color) !important;
+}
+
+.container {
+	width: var(--container-width) !important;
+	max-width: var(--container-max-width) !important;
+  	margin: 0 auto !important;
+}
+
+.bg-primary {
+	background-color: var(--primary-color) !important;
+}
+
+.text-secondary {
+	color: var(--secondary-text-color) !important;
+}
+
+.text-primary {
+	color: var(--primary-text-color) !important;
+}
+
+.bg-subprimary {
+	background-color: var(--bg-html-subcolor) !important;
+}
+
+.bg-primary-btn {
+	background-color: var(--primary-color) !important;
+	color: var(--secondary-text-color) !important;
+}
+
+.tx-bold {
+	font-weight: bold !important;
+}
+
+.boder-principal {
+	border-width: var(--border-principal-width) !important;
+	border-style: var(--border-principal-style) !important;
+	border-color: var(--border-principal-color) !important;
+}
+
+.boder-left-principal {
+	border-left-width: var(--border-principal-width) !important;
+	border-left-style: var(--border-principal-style) !important;
+	border-left-color: var(--border-principal-color) !important;
+}
+
+.boder-right-principal {
+	border-right-width: var(--border-principal-width) !important;
+	border-right-style: var(--border-principal-style) !important;
+	border-right-color: var(--border-principal-color) !important;
+}
+
+.boder-bottom-principal {
+	border-bottom-width: var(--border-principal-width) !important;
+	border-bottom-style: var(--border-principal-style) !important;
+	border-bottom-color: var(--border-principal-color) !important;
+}
+
+.boder-top-principal {
+	border-top-width: var(--border-principal-width) !important;
+	border-top-style: var(--border-principal-style) !important;
+	border-top-color: var(--border-principal-color) !important;
+}
+
+.offcanvas button.btn-offcanvas-close {
+	background-color: transparent !important;
+	text-decoration: none !important;
+	cursor: pointer !important;
+	border: none !important;
+}
+
+.offcanvas button.btn-offcanvas-close > span {
+	font-size: var(--navbar-toggle-button-size) !important;
+}
+
+.offcanvas button.btn-offcanvas-close > span:hover {
+	color: var(--primary-text-color-hover) !important;
+}
+
+.margin-top-at-navbar { 
+	height: var(--calc-div-margin-top-at-navbar) !important;
+}
+
+.card,
+.card .card-header p,
+.card .card-header span,
+.card .card-header h1,
+.card .card-header h2,
+.card .card-header h3,
+.card .card-header h4,
+.card .card-header h5,
+.card .card-header h6,
+.card .card-header a ,
+.card .card-body p,
+.card .card-body span,
+.card .card-body h1,
+.card .card-body h2,
+.card .card-body h3,
+.card .card-body h4,
+.card .card-body h5,
+.card .card-body h6,
+.card .card-body a,
+.card .card-body table,
+.card .card-body td,
+.card .card-body tr,
+.card .card-body thead,
+.card .card-body tbody,
+.card .card-body tfooter { 
+	border-radius: 0 !important;
+	background-color: var(--bg-html-subcolor) !important;
+	color: var(--primary-text-color) !important;
+}

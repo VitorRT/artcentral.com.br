@@ -1,0 +1,39 @@
+:root {
+	/* Cores */
+	--branco: #FFF;
+	--branco-hover: #AEAEAE;
+	--azul-escuro: #0E0A28;
+	--azul-escuro-secundario: #191B31;
+	--branco-amarelado-pastel: #FFFEE8;
+	--branco-amarelado-pastel-hover: #E5E4BC;
+	
+	--bg-html-color: var(--azul-escuro);
+	--bg-html-subcolor: var(--azul-escuro-secundario);
+	--primary-text-color: var(--branco);
+	--primary-text-color-hover: var(--branco-hover);
+	--secondary-text-color: var(--bg-html-color);
+	--primary-color: var(--branco-amarelado-pastel);
+	--primary-color-hover: var(--branco-amarelado-pastel-hover);
+	
+	/* Bordas */
+	-border-principal-color: var(--branco);
+	--border-principal-style: solid;
+	--border-principal-width: .4px;
+	
+	/* Medidas */
+	--container-width: 90%;
+	--container-max-width: 1450px;
+	--navbar-height: 65px;
+	--navbar-width: 100vw;
+	--primary-link-button-height: 25px;
+	--navbar-toggle-button-size: 40px;
+	--navbar-brand-image-width: 45px;
+	--navbar-brand-image-height: 45px;
+	--navbar-padding-y: 40px;
+	--navbar-background-color: rgba(14, 10,40, 0.7);
+	
+	/* calcs */
+	--margin-top-at-navbar: 10px;
+	--calc-div-margin-top-at-navbar: calc(var(--navbar-height) + var(--navbar-padding-y) + var(--margin-top-at-navbar));
+	
+}

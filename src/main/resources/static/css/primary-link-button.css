@@ -1,0 +1,13 @@
+.primary-link-button {
+	width: max-content;
+	height: max-content !important;
+	border-radius: 0 !important;
+}
+.primary-link-button:hover {
+	background-color: var(--primary-color-hover) !important;
+}
+
+.primary-link-button:focus {
+	outline-color: var(--secondary-text-color) !important;
+	box-shadow: none !important;
+}

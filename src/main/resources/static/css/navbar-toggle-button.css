@@ -1,0 +1,9 @@
+.navbar-toggle-button {
+	font-size: var(--navbar-toggle-button-size) !important;
+	color: var(--primary-color) !important;
+	cursor: pointer !important;
+}
+
+.navbar-toggle-button:hover {
+	color: var(--primary-color-hover) !important;
+}

@@ -10,12 +10,11 @@ import br.com.artcentral.mvc.system.routes.FilePath;
 @Controller
 @RequestMapping("/arts")
 public class ArtWebController {
-	private FilePath fp = new FilePath();
+	private final FilePath fp = new FilePath();
 	
 	@GetMapping
 	public ModelAndView renderArtListingPage() {
 		ModelAndView mv = new ModelAndView(fp.artListingPageHtml);
-		
 		return mv;
 	}
 	

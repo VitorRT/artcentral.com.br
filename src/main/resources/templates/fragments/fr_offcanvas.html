@@ -1,0 +1,19 @@
+<div th:fragment="navbarToggleMoreItemsOffcanvas">
+	<div
+		th:replace="~{fragments/fr_button :: navbarButtonToggle('navbarMoreItems')}"></div>
+	<div class="offcanvas boder-left-principal offcanvas-end" tabindex="-1"
+		id="navbarMoreItems" aria-labelledby="navbarMoreItemsLabel">
+		<div class="offcanvas-header">
+			<h5 id="offcanvasRightLabel">Menu fácil!</h5>
+			<link rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			<button type="button" class="text-reset btn-offcanvas-close" data-bs-dismiss="offcanvas"
+				aria-label="Close">
+				<span class="material-symbols-outlined"> close </span>
+			</button>
+		</div>
+		<div class="offcanvas-body">
+			
+		</div>
+	</div>
+</div>

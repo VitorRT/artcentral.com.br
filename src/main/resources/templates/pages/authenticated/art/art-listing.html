@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head th:replace="~{/fragments/fr_head :: head('Artes')}"></head>
-<body>
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head th:replace="~{fragments/fr_head :: head('Artes')}"></head>
+<link rel="stylesheet" th:href="@{/css/pages/art-listing/css-art-listing.css}">
+<script th:src="@{/js/pages/art-listing/js-arts-analysis-charts.js}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body class="averia-libre-light">
+	<nav th:replace="~{fragments/fr_navbar :: navbar-authenticated}"></nav>
+	<!-- 
+	<div class="container-fluid">
+		<div class="home-background-container"></div>
+	</div>
+	 -->
+	<div class="margin-top-at-navbar"></div>
+
 	<main class="container">
-		<div class="card">
-			<div class="card-body">
-				<p>Hello world!</p>
-			</div>
-		</div>
+		<div th:replace="~{fragments/pages/art-listing/fr_art_charts :: art-charts}"></div>
+		<div th:replace="~{fragments/pages/art-listing/fr_arts_tables :: arts-table}"></div>
 	</main>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!-- ================================= -->
+<!-- = Botão de toggle para o navbar = -->
+<!-- ================================= -->
+<div th:fragment="navbarButtonToggle(offcanvasId)">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />	<link rel="stylesheet" th:href="@{/css/navbar-toggle-button.css}">
+	<link rel="stylesheet" th:href="@{/css/navbar-toggle-button.css}">
+	<span class="material-symbols-outlined navbar-toggle-button"
+		th:attr="data-bs-toggle='offcanvas', data-bs-target='#'+${offcanvasId}, aria-controls=${offcanvasId}">
+		menu
+	</span>
+</div>
+
+
+<!-- ====================================================== -->
+<!-- = Botão de link principal com a cor de fundo primária = -->
+<!-- ======================================================= -->
+<div th:fragment="primaryLinkButton( content, link, icon, miType )">
+	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
+	<a th:href="${link}" class="primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
+		<div class="d-flex align-items-center gap-2">
+			<span th:if="${ icon != null and icon != '' }" th:attr="class=${miType}" th:text="${icon}"></span>
+			<span th:text="${content}" class="text-secondary tx-bold"></span>
+		</div> 
+	</a>
+</div>
