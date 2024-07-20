@@ -8,11 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 import br.com.artcentral.mvc.system.routes.FilePath;
 
 @Controller
-@RequestMapping("/arts")
 public class ArtWebController {
-	private final FilePath fp = new FilePath();
+	private FilePath fp = new FilePath();
 	
-	@GetMapping
+	@GetMapping("/arts")
 	public ModelAndView renderArtListingPage() {
 		ModelAndView mv = new ModelAndView(fp.artListingPageHtml);
 		return mv;

@@ -1,0 +1,23 @@
+.card-art {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.card-art-image-bg-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+.card-art-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
