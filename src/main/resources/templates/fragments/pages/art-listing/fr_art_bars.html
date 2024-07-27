@@ -1,0 +1,12 @@
+<!-- =================== -->
+<!-- = Bar de arts     = -->
+<!-- = - Botão add Art = -->
+<!-- =================== -->
+<div th:fragment="art_bar" class="d-flex justify-content-between align-items-center my-3">
+	<h4>Suas artes</h4>
+	<div data-bs-toggle="modal" data-bs-target="#addArtModalStep1">
+		<div th:replace="~{fragments/fr_button :: addButtonForModal('addArtBtn')}"></div>
+	</div>
+</div>
+
+

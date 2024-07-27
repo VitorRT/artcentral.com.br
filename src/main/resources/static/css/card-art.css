@@ -1,9 +1,8 @@
 .card-art {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+  	position: relative;
+    width: 100%;
+    height: var(--card-art-height) !important;
+    aspect-ratio: 16/9;
     overflow: hidden;
     color: #fff;
 }
@@ -18,6 +17,34 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    background: rgba(25, 27, 49, 0.8);
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
     padding: 10px;
+    padding-bottom: 15px;
+}
+
+.card-art-image-bg-container div {
+    background-size: cover;
+    background-position: center;
+}
+
+.card-art-content .card-art-content-infos .card-art-content-infos-header p,
+.card-art-content .card-art-content-infos .card-art-content-infos-header span {
+	color: var(--cinza-claro) !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .responsive-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive-grid-container {
+        grid-template-columns: 1fr;
+    }
 }

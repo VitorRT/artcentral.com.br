@@ -1,0 +1,58 @@
+/* Personalizar o fundo e a cor do texto */
+.daterangepicker,
+.daterangepicker .drp-calendar,
+.daterangepicker .drp-calendar .calendar-table,
+.daterangepicker .drp-calendar .calendar-table table {
+	--fundo: var(--azul-escuro-secundario) !important;
+	--cor-letra: var(--branco-amarelado-pastel) !important;
+	--fundo-in-range: rgba(245, 243, 194, 0.7);
+	--fundo-selecionado:  var(--branco-amarelado-pastel) !important;
+	
+    background-color: var(--fundo) !important;
+    color: var(--cor-letra) !important;
+}
+
+.daterangepicker .drp-calendar .calendar-table .in-range {
+	background-color: var(--fundo-in-range) !important;
+	color: var(--fundo) !important;
+}
+
+.daterangepicker .drp-calendar .calendar-table .start-date,
+.daterangepicker .drp-calendar .calendar-table .end-date {
+	background-color: var(--fundo-selecionado) !important;
+	color: var(--fundo) !important;
+}
+
+/* Personalizar a cor do texto dos inputs */
+.daterangepicker input {
+    color: var(--cor-letra);
+    background-color: var(--fundo) !important;
+    border-color: var(--cor-letra);
+}
+
+/* Personalizar a cor do texto dos botões */
+.daterangepicker .ranges li,
+.daterangepicker .drp-buttons .btn {
+    color: var(--cor-letra);
+}
+
+/* Personalizar o fundo e a cor do texto dos dias */
+.daterangepicker td.available {
+    background-color: var(--fundo) !important;
+    color: var(--cor-letra);
+}
+
+/* Personalizar o hover dos dias */
+.daterangepicker td.available:hover {
+    background-color: var(--cor-letra);
+    color: var(--fundo) !important
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .daterangepicker {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}

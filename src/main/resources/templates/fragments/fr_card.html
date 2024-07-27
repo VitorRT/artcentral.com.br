@@ -1,11 +1,23 @@
 <!-- ==================== -->
 <!-- = Card de uma arte = -->
 <!-- ==================== -->
-<div th:fragment="card_art" class="card-art">
+<div th:fragment="card_art(id)" th:id="${id}" class="card-art border-principal">
 	<link rel="stylesheet" th:href="@{/css/card-art.css}">
-	<div class="card-art-image-bg-container">
-		<div class="card-art-content">
-			<p>Teste</p>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<div class="card-art-image-bg-container"></div>
+	<div class="card-art-content">
+		<div class="d-flex justify-content-between full-width">
+			<div th:replace="~{fragments/fr_icon :: i_info('tp-info')}"></div>
+			<div th:replace="~{fragments/fr_badge :: card_badge('Privado')}"></div>
+		</div>
+		<div class="card-art-content-infos">
+			<div class="d-flex gap-2 card-art-content-infos-header">
+				<span class="d-block material-symbols-outlined">calendar_month</span>
+				<p style="align-self: center;">- 10 dias atras</p>	
+			</div>
+			<h5>Hoodie and Coffe :3</h5>
+			<p>Em Andamento</p>
+			<div th:replace="~{fragments/fr_button :: primaryLinkButtonWH100('Abrir', '#', '', '' )}"></div>
 		</div>
 	</div>
 	<script th:src="@{/js/card-art.js}"></script>

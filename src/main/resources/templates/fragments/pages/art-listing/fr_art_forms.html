@@ -1,0 +1,33 @@
+<!-- =================================================== -->
+<!-- = Forumlário Cadastro de Art no sistema - Etapa 1 = --> 
+<!-- =================================================== -->
+<form th:fragment="addArtFormStep1">
+	<div class="row">
+		<div class="col">
+			<div th:replace="~{fragments/fr_input :: txtInputRequired('artName', 'Nome da arte', '')}"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<label for="artVisibility" class="form-label">Visibilidade <code>*</code></label>
+			<select id="artVisibility" name="s">
+				<option value="private">Privado</option>
+				<option value="public">Público</option>
+			</select>
+		</div>
+		<div class="col d-flex gap-3" style="margin: auto 0;">
+			<label class="form-label">Data de prazo</label>
+			<div th:replace="~{fragments/fr_button :: togglePrimaryButton('isThereADeadline')}"></div>
+		</div>
+	</div>
+	
+	<!-- Linha valor default - Hidden -->
+	<div class="row d-none mt-4" id="deadlineRow">
+		<div class="col">
+			<label for="startScheduleDate" class="form-label">Qual é o prazo? <code>*</code></label>
+			<div th:replace="~{fragments/fr_input :: datepicker('startScheduleDate')}"></div>
+		</div>
+	</div>
+	
+	<script th:src="@{/js/pages/art-listing/art-form-state.js}"></script>
+</form>

@@ -23,3 +23,76 @@
 		</div> 
 	</a>
 </div>
+
+
+<!-- ====================================================== -->
+<!-- = Botão de link principal com a cor de fundo primária = -->
+<!-- ======================================================= -->
+<div th:fragment="primaryLinkButtonW100( content, link, icon, miType )">
+	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
+	<a th:href="${link}" class="full-width primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
+		<div class="d-flex align-items-center gap-2">
+			<span th:if="${ icon != null and icon != '' }" th:attr="class=${miType}" th:text="${icon}"></span>
+			<span th:text="${content}" class="text-secondary tx-bold"></span>
+		</div> 
+	</a>
+</div>
+
+
+<!-- ====================================================== -->
+<!-- = Botão de link principal com a cor de fundo primária = -->
+<!-- ======================================================= -->
+<div th:fragment="primaryLinkButtonWH100( content, link, icon, miType )">
+	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
+	<a th:href="${link}" class="full-width full-heigth primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
+		<div class="d-flex align-items-center gap-2">
+			<span th:if="${ icon != null and icon != '' }" th:attr="class=${miType}" th:text="${icon}"></span>
+			<span th:text="${content}" class="text-secondary tx-bold"></span>
+		</div> 
+	</a>
+</div>
+
+
+
+
+
+<!-- ===================================== -->
+<!-- = Botão de adicionar - Com Animação = -->
+<!-- = Funcionamento com modal.   		 = -->
+<!-- ===================================== -->
+<div th:fragment="addButtonForModal(id)">
+	<link rel="stylesheet" th:href="@{/css/add_button.css}">
+	<div tabindex="0" class="plusButton" th:id="${id}">
+	  <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+	    <g mask="url(#mask0_21_345)">
+	      <path d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z"></path>
+	    </g>
+	  </svg>
+	</div>
+</div>
+
+ 
+<!-- ===================================== -->
+<!-- = Botão de mudança de modal 		 = -->
+<!-- = Funcionamento com modal - .   	 = -->
+<!-- ===================================== -->
+<div th:fragment="addButtonSwitchModal(id, content)">
+	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
+	<button 	 
+		th:attr="data-bs-target=${id}"
+		data-bs-toggle="modal"
+		data-bs-dismiss="modal"
+		class="primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
+		<div class="d-flex align-items-center gap-2">
+			<span th:text="${content}" class="text-secondary tx-bold"></span>
+		</div> 
+	</button>
+</div>
+
+
+<div th:fragment="togglePrimaryButton(id)">
+    <link rel="stylesheet" th:href="@{/css/toggle_primary_button.css}">
+	<label th:for=${id} class="switch-primary">
+	  <input type="checkbox" th:id=${id} >
+	</label>
+</div>

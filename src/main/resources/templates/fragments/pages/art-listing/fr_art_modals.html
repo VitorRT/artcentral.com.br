@@ -1,0 +1,55 @@
+<!-- ======================================== -->
+<!-- = Modal de cadastro de arte no sistema = -->
+<!-- ======================================== -->
+<div th:fragment="add_art_modals">
+	<!-- Modal - Etapa 1 -->
+	<div class="modal fade"
+		id="addArtModalStep1" aria-hidden="true"
+		aria-labelledby="addArtModalStep1Label" tabindex="-1">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="addArtModalStep1Label">Adicione sua
+						arte - Etapa 1</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form th:replace="~{fragments/pages/art-listing/fr_art_forms :: addArtFormStep1}"></form>
+				</div>
+				<div class="modal-footer">
+					<div th:replace="~{fragments/fr_button :: addButtonSwitchModal('#addArtModalStep2', 'Continuar para a etapa 2')}"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal - Etapa 2 -->
+	<div class="modal fade"
+		id="addArtModalStep2" aria-hidden="true"
+		aria-labelledby="addArtModalStep2Label" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="addArtModalStep2Label">Adicione sua
+						arte - Quase lá...</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Etapa 2</p>
+				</div>
+				<div class="modal-footer">
+					<div th:replace="~{fragments/fr_button :: addButtonSwitchModal('#addArtModalStep1', 'Voltar para etapa 1')}"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

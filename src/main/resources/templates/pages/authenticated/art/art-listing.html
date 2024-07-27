@@ -16,8 +16,18 @@
 
 	<main class="container">
 		<div th:replace="~{fragments/pages/art-listing/fr_art_charts :: art-charts}"></div>
-		<div th:replace="~{fragments/fr_card :: card_art}"></div>
+		
+		<div th:replace="~{fragments/pages/art-listing/fr_art_bars :: art_bar}"></div>
+		
+		<div class="responsive-grid-container gap-4">
+			<div th:replace="~{fragments/fr_card :: card_art('card1')}"></div>
+			<div th:replace="~{fragments/fr_card :: card_art('card2')}"></div>
+			<div th:replace="~{fragments/fr_card :: card_art('card3')}"></div>
+		</div>
+		
 		<!-- <div th:replace="~{fragments/pages/art-listing/fr_arts_tables :: arts-table}"></div> -->
+		
+		<div th:replace="~{ fragments/pages/art-listing/fr_art_modals:: add_art_modals}"></div>
 	</main>
 </body>
 </html>

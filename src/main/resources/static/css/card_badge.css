@@ -1,0 +1,10 @@
+.card_badge {
+	background-color: var(--primary-color) !important;
+	color: var(--secondary-text-color) !important;
+	padding: var(--card-badge-padding) !important;
+}
+
+.card_badge span {
+	font-size: var(--card-badge-content-size) !important;
+	font-weight: bold !important;
+}

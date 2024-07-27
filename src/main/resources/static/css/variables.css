@@ -2,9 +2,13 @@
 	/* Cores */
 	--branco: #FFF;
 	--branco-hover: #AEAEAE;
+	--cinza-claro: #CCCCCC;
 	--azul-escuro: #0E0A28;
+	--azul-escuro-vidro: rgba(45, 32, 130, 0.8);
 	--azul-escuro-secundario: #191B31;
-	--branco-amarelado-pastel: #FFFEE8;
+	--azul-bem-escuro: rgb(14, 15, 33);
+	--azul-bem-escuro-vidro: rgba(14, 15, 33, 0.7);
+	--branco-amarelado-pastel: rgb(245, 243, 194); 
 	--branco-amarelado-pastel-hover: #E5E4BC;
 	
 	--bg-html-color: var(--azul-escuro);
@@ -23,14 +27,21 @@
 	/* Medidas */
 	--container-width: 90%;
 	--container-max-width: 1450px;
-	--navbar-height: 65px;
+	--navbar-height: 60px;
 	--navbar-width: 100vw;
 	--primary-link-button-height: 25px;
 	--navbar-toggle-button-size: 40px;
 	--navbar-brand-image-width: 45px;
 	--navbar-brand-image-height: 45px;
-	--navbar-padding-y: 40px;
+	--navbar-padding-y: 0px;
 	--navbar-background-color: rgba(14, 10,40, 0.7);
+	--card-art-height: 300px;
+	--tooltip-background-color: rgba(25, 27,49, 0.9);
+	--card-badge-padding: 5px;
+	--card-badge-content-size: 16px;
+	--plus_btn_sideLength: 2.5rem;
+  	--plus_btntopRightTriangleSideLength: 0.9rem;
+  	--input-form-font-size: 0.875rem;
 	
 	/* calcs */
 	--margin-top-at-navbar: 10px;

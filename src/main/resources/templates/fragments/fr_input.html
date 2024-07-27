@@ -1,0 +1,25 @@
+<!-- ============================================= -->
+<!-- = Campo Input Texto com Label 				 = -->
+<!-- = @param id - id do input 					 = -->
+<!-- = @param label - Valor do label			 = -->
+<!-- = @param placeholder - placeholder do input = -->
+<!-- ============================================= -->
+<div th:fragment="txtInputRequired(id, label, placeholder)" class="mb-4">
+	<div>	
+		<label class="form-label" th:for="${id}">
+			<span th:text="${label}"></span>
+			<code>*</code>
+		</label>
+	</div>
+	<input class="form-input" type="text" th:placeholder="${placeholder}" required/>
+</div>
+
+
+<!-- ============= -->
+<!-- = Datepicker  -->
+<!-- ================ -->
+<div th:fragment="datepicker(id) full-width">
+	<link rel="stylesheet" th:href="@{/css/datepicker.css}">
+	<input class="datepicker full-width" th:id="${id}" name='datePicker'>
+	<script th:src="@{/js/datepicker.js}"></script>
+</div>
