@@ -253,3 +253,8 @@ html > body,
 .select-options li[rel="hide"] {
   display: none;
 }
+
+.modal-dialog {
+    max-height: 90vh !important;/* ou qualquer valor adequado */
+    overflow-y: auto !important;
+}

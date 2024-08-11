@@ -39,20 +39,26 @@
 /* Personalizar o fundo e a cor do texto dos dias */
 .daterangepicker td.available {
     background-color: var(--fundo) !important;
-    color: var(--cor-letra);
+    color: var(--cor-letra) !important;
 }
 
 /* Personalizar o hover dos dias */
-.daterangepicker td.available:hover {
-    background-color: var(--cor-letra);
-    color: var(--fundo) !important
+.daterangepicker .table-condensed td.available:hover {
+    background-color: var(--cor-letra) !important;
+    color: var(--fundo) !important;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .daterangepicker {
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
+.daterangepicker th.prev.available > span,
+.daterangepicker th.next.available > span {
+	border-color: var(--cor-letra) !important;
+}
+
+.daterangepicker th.prev.available:hover,
+.daterangepicker th.next.available:hover {
+    background-color: var(--cor-letra) !important;
+}
+
+.daterangepicker th.prev.available:hover > span,
+.daterangepicker th.next.available:hover > span {
+    border-color: var(--fundo) !important;
 }
