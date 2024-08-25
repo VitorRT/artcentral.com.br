@@ -258,3 +258,9 @@ html > body,
     max-height: 90vh !important;/* ou qualquer valor adequado */
     overflow-y: auto !important;
 }
+
+.inputFile {
+	width: max-content;
+	height: max-content !important;
+	border-radius: 0 !important;
+}

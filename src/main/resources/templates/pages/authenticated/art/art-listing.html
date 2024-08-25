@@ -5,6 +5,17 @@
 <link rel="stylesheet" th:href="@{/css/pages/art-listing/css-art-listing.css}">
 <script th:src="@{/js/pages/art-listing/js-arts-analysis-charts.js}" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" th:href="@{/css/add_button.css}">
+<link rel="stylesheet" th:href="@{/css/card-art.css}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" th:href="@{/css/i_info.css}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" th:href="@{/css/card_badge.css}">
+<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
+<link rel="stylesheet" th:href="@{/css/datepicker.css}">
+<link rel="stylesheet" th:href="@{/css/toggle_primary_button.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/css/imageListUploader.css}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <body class="averia-libre-light">
 	<nav th:replace="~{fragments/fr_navbar :: navbar-authenticated}"></nav>
 	<!-- 
@@ -29,5 +40,11 @@
 		
 		<div th:replace="~{ fragments/pages/art-listing/fr_art_modals:: add_art_modals}"></div>
 	</main>
+	
+	<script th:src="@{/js/card-art.js}"></script>
+	<script th:src="@{/js/i_info.js}"></script>
+	<script th:src="@{/js/pages/art-listing/art-form-state.js}"></script>
+	<script th:src="@{/js/datepicker.js}"></script>
+	<script th:src="@{/js/imageListUploader.js}"></script>
 </body>
 </html>

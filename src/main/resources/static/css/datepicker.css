@@ -62,3 +62,7 @@
 .daterangepicker th.next.available:hover > span {
     border-color: var(--fundo) !important;
 }
+
+.daterangepicker td.off.disabled {
+	background-color: var(--azul-muito-escuro) !important;
+}

@@ -29,7 +29,7 @@
 	<div class="modal fade"
 		id="addArtModalStep2" aria-hidden="true"
 		aria-labelledby="addArtModalStep2Label" tabindex="-1">
-		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="addArtModalStep2Label">Adicione sua
@@ -38,7 +38,8 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<p>Etapa 2</p>
+					<p>Selecione suas referências!</p>
+					<form th:replace="~{fragments/pages/art-listing/fr_art_forms :: addArtFormStep2}"></form>
 				</div>
 				<div class="modal-footer">
 					<div th:replace="~{fragments/fr_button :: addButtonSwitchModal('#addArtModalStep1', 'Voltar para etapa 1')}"></div>

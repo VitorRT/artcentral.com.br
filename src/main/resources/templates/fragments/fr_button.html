@@ -1,9 +1,9 @@
 <!-- ================================= -->
 <!-- = Botão de toggle para o navbar = -->
 <!-- ================================= -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />	<link rel="stylesheet" th:href="@{/css/navbar-toggle-button.css}">
+<link rel="stylesheet" th:href="@{/css/navbar-toggle-button.css}">
 <div th:fragment="navbarButtonToggle(offcanvasId)">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />	<link rel="stylesheet" th:href="@{/css/navbar-toggle-button.css}">
-	<link rel="stylesheet" th:href="@{/css/navbar-toggle-button.css}">
 	<span class="material-symbols-outlined navbar-toggle-button"
 		th:attr="data-bs-toggle='offcanvas', data-bs-target='#'+${offcanvasId}, aria-controls=${offcanvasId}">
 		menu
@@ -14,8 +14,8 @@
 <!-- ====================================================== -->
 <!-- = Botão de link principal com a cor de fundo primária = -->
 <!-- ======================================================= -->
+<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 <div th:fragment="primaryLinkButton( content, link, icon, miType )">
-	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 	<a th:href="${link}" class="primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
 		<div class="d-flex align-items-center gap-2">
 			<span th:if="${ icon != null and icon != '' }" th:attr="class=${miType}" th:text="${icon}"></span>
@@ -28,8 +28,8 @@
 <!-- ====================================================== -->
 <!-- = Botão de link principal com a cor de fundo primária = -->
 <!-- ======================================================= -->
+<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 <div th:fragment="primaryLinkButtonW100( content, link, icon, miType )">
-	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 	<a th:href="${link}" class="full-width primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
 		<div class="d-flex align-items-center gap-2">
 			<span th:if="${ icon != null and icon != '' }" th:attr="class=${miType}" th:text="${icon}"></span>
@@ -42,8 +42,8 @@
 <!-- ====================================================== -->
 <!-- = Botão de link principal com a cor de fundo primária = -->
 <!-- ======================================================= -->
+<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 <div th:fragment="primaryLinkButtonWH100( content, link, icon, miType )">
-	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 	<a th:href="${link}" class="full-width full-heigth primary-link-button bg-primary btn d-flex align-items-center justify-content-center">
 		<div class="d-flex align-items-center gap-2">
 			<span th:if="${ icon != null and icon != '' }" th:attr="class=${miType}" th:text="${icon}"></span>
@@ -60,8 +60,8 @@
 <!-- = Botão de adicionar - Com Animação = -->
 <!-- = Funcionamento com modal.   		 = -->
 <!-- ===================================== -->
+<link rel="stylesheet" th:href="@{/css/add_button.css}">
 <div th:fragment="addButtonForModal(id)">
-	<link rel="stylesheet" th:href="@{/css/add_button.css}">
 	<div tabindex="0" class="plusButton" th:id="${id}">
 	  <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
 	    <g mask="url(#mask0_21_345)">
@@ -76,8 +76,8 @@
 <!-- = Botão de mudança de modal 		 = -->
 <!-- = Funcionamento com modal - .   	 = -->
 <!-- ===================================== -->
+<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 <div th:fragment="addButtonSwitchModal(id, content)">
-	<link rel="stylesheet" th:href="@{/css/primary-link-button.css}">
 	<button 	 
 		th:attr="data-bs-target=${id}"
 		data-bs-toggle="modal"
@@ -90,8 +90,8 @@
 </div>
 
 
+<link rel="stylesheet" th:href="@{/css/toggle_primary_button.css}">
 <div th:fragment="togglePrimaryButton(id)">
-    <link rel="stylesheet" th:href="@{/css/toggle_primary_button.css}">
 	<label th:for=${id} class="switch-primary">
 	  <input type="checkbox" th:id=${id} >
 	</label>

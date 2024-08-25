@@ -15,11 +15,25 @@
 </div>
 
 
-<!-- ============= -->
-<!-- = Datepicker  -->
-<!-- ================ -->
-<div th:fragment="datepicker(id) full-width">
-	<link rel="stylesheet" th:href="@{/css/datepicker.css}">
+<!-- ============== -->
+<!-- = Datepicker = -->
+<!-- ============== -->
+<link rel="stylesheet" th:href="@{/css/datepicker.css}">
+<script th:src="@{/js/datepicker.js}"></script>
+<div th:fragment="datepicker(id)" class="full-width">
 	<input class="datepicker full-width" th:id="${id}" name='datePicker'>
-	<script th:src="@{/js/datepicker.js}"></script>
+</div>
+
+<!-- ================= -->
+<!-- = Imageuploader = -->
+<!-- ================= -->
+<link rel="stylesheet" type="text/css" th:href="@{/css/imageListUploader.css}">
+<script th:src="@{/js/imageListUploader.js}"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div th:fragment="imageListUploader(id)" class="full-width imageListUploader">
+	<div><input type="file" id="inputFileAux" multiple/></div>
+    <!-- Selector -->
+    <div class="imageListUploader-images-area">
+        <!-- O conteúdo padrão aparecerá aqui -->
+    </div>
 </div>
